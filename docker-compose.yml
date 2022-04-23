@@ -1,14 +1,12 @@
 version: '3.7'
 services:
-  testproject:
+  vpn_bonus:
     build: .
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     command: gunicorn testproject.wsgi --bind=0.0.0.0:8000
 
     volumes:
-      - ./app/:/usr/src/
+      - ./app/:/usr/src/vpn_bonus
     ports:
       - 88:8000
-    env_file:
-      - ./.env
