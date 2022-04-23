@@ -9,6 +9,6 @@ services:
     volumes:
       - ./app/:/usr/src/
     ports:
-      - 80:8000
+      - 88:8000
     env_file:
       - ./.env
