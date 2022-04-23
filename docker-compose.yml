@@ -4,7 +4,7 @@ services:
     build: .
     stdin_open: true # docker run -i
     tty: true        # docker run -t
-    command: gunicorn testproject.wsgi --bind=0.0.0.0:8000
+    command: gunicorn vpn_bonus.wsgi --bind=0.0.0.0:8000
 
     volumes:
       - ./app/:/usr/src/vpn_bonus
